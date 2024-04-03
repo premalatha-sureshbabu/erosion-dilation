@@ -6,26 +6,20 @@ To implement Erosion and Dilation using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
-<br>
 Import the image
 
-
 ### Step2:
-<br>
 Read the colour image and convert it into grayscale
 
 ### Step3:
-<br>
 Perform edge detection using canny
+
 ### Step4:
-<br>
 Define the kernel size for erosion and dilation
 
 ### Step5:
-<br>
 Display all images
 
- 
 ## Program:
 
 ```
