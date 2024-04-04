@@ -73,15 +73,15 @@ plt.show()
 ```
 ## Output:
 
-# Display the input Image
+### Display the input Image
 
 ![Screenshot 2024-04-04 194218](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/b9498c9b-67a7-4df9-b879-4756670da6bc)
 
-# Display the Eroded Image
+### Display the Eroded Image
 
 ![Screenshot 2024-04-04 194241](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/2d331c7c-4715-4cc5-815d-f59d41ae077f)
 
-# Display the Dilated Image
+### Display the Dilated Image
 
 ![Screenshot 2024-04-04 194249](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/4a949a34-a4de-4964-abab-570f34cbae49)
 
