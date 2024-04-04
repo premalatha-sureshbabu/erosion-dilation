@@ -22,39 +22,25 @@ Display all images
 
 ## Program:
 
+# Import the necessary packages
 ```
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-
-#Read the color image
-
+```
+# Create the Text using cv2.putText
+```
 input_image_path = 'prema.jpg'
 color_image = cv2.imread(input_image_path)
-
-#Convert the color image to grayscale
-
 gray_image=cv2.cvtColor(color_image, cv2.COLOR_BGR2GRAY)
-
-#Perform edge detection using Canny
-
 edges = cv2.Canny(gray_image, 100, 200) # you can adjust the thresholds as needed
-
-#Define the kernel size for erosion and dilation
-
 kernel_size = 5
 kernel = np.ones((kernel_size, kernel_size), np. uint8)
-
-#Perform erosion
-
 erosion = cv2.erode(edges, kernel, iterations=1)
-
-#Perform diiation
-
 dilation = cv2.dilate(edges, kernel, iterations=1)
-
-#Display all images
-
+```
+# Create the structuring element
+```
 plt.figure(figsize=(15, 10))
 plt.subplot(2, 3, 1)
 plt.imshow(cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB))
@@ -68,10 +54,16 @@ plt.subplot(2, 3, 3)
 plt.imshow(edges, cmap='gray')
 plt.title('Edge Segmentation')
 plt.axis('on')
+```
+# Erode the image
+```
 plt.subplot(2, 3, 4)
 plt.imshow(erosion, cmap = 'gray')
 plt.title('Erosion')
 plt.axis('on')
+```
+# Dilate the image
+```
 plt.subplot(2, 3, 5)
 plt.imshow(dilation, cmap='gray')
 plt.title('Dilation')
@@ -81,8 +73,17 @@ plt.show()
 ```
 ## Output:
 
-![Screenshot 2024-04-02 112234](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/dcd3495d-eac8-4e92-a4a5-9ab0efded1c3)
+# Display the input Image
 
+![Screenshot 2024-04-04 194218](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/b9498c9b-67a7-4df9-b879-4756670da6bc)
+
+# Display the Eroded Image
+
+![Screenshot 2024-04-04 194241](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/2d331c7c-4715-4cc5-815d-f59d41ae077f)
+
+# Display the Dilated Image
+
+![Screenshot 2024-04-04 194249](https://github.com/premalatha-sureshbabu/erosion-dilation/assets/120620842/4a949a34-a4de-4964-abab-570f34cbae49)
 
 ## Result
 Thus the generated text image is eroded and dilated using python and OpenCV.
